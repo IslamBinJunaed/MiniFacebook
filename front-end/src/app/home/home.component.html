@@ -1,0 +1,45 @@
+<!-- STORY SECTION -->
+<div>
+  <div class="title">All Stories</div>
+  <div class="story-body">
+    <img
+      class="rounded mx-2 d-block"
+      *ngFor="let imageName of storySourceList"
+      [src]="'http://localhost:9000/story/' + imageName"
+    />
+  </div>
+  <div class="title">Upload Story</div>
+
+  <input type="file" name="story" (change)="handleFileUpload($event)" />
+</div>
+
+<!-- STATUS SECTION -->
+<div class="form-outline">
+  <label class="form-label" for="textAreaExample">
+    <div class="title">Post Status</div>
+  </label>
+  <textarea
+    class="form-control"
+    id="textAreaExample1"
+    rows="3"
+    [(ngModel)]="content"
+    [ngModelOptions]="{ standalone: true }"
+  ></textarea>
+  <button
+    class="btn btn-primary"
+    (click)="handlePostSubmission()"
+    style="margin-top: 10px"
+  >
+    Post
+  </button>
+</div>
+
+<div class="title">All Status</div>
+
+<div
+  class="shadow p-3 mb-5 bg-white rounded status-body"
+  *ngFor="let status of statusList"
+>
+  <div class="status-head">{{ status.email }}</div>
+  <div>{{ status.content }}</div>
+</div>

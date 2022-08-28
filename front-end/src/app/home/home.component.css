@@ -1,0 +1,26 @@
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.status-body {
+    border: 1px solid gray;
+    font-size: 18px;
+}
+
+
+.status-head {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 2px;
+}
+
+.story-body {
+    overflow-x: scroll;
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
